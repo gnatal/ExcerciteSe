@@ -1,5 +1,6 @@
 import React from "react";
 import CadastroLocal from "./Pages/Cadastro";
+import Home from "./Pages/Home";
 
 /**
  * App colors
@@ -11,7 +12,7 @@ import CadastroLocal from "./Pages/Cadastro";
 function App() {
   return (
     <div>
-      <CadastroLocal></CadastroLocal>
+      <Home></Home>
     </div>
   );
 }
