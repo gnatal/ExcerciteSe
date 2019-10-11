@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Card, CardText, CardImage } from "./Style";
 
 const localData = [
   {
@@ -15,8 +16,21 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <div>{localData[0].endereco}</div>
-        <div>{localData[1].endereco}</div>
+        {localData.map((local, index) => {
+          return (
+            <Card key={index}>
+              <CardImage src="logo192.png" />
+              <Fragment>
+                <CardText>
+                  local:
+                  <br />
+                  {local.endereco}
+                </CardText>
+                <CardText>descricao: {local.descricao}</CardText>
+              </Fragment>
+            </Card>
+          );
+        })}
       </Fragment>
     );
   }

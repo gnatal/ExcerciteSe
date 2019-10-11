@@ -1,6 +1,7 @@
 import React from "react";
 import CadastroLocal from "./Pages/Cadastro";
 import Home from "./Pages/Home";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 /**
  * App colors
@@ -12,7 +13,10 @@ import Home from "./Pages/Home";
 function App() {
   return (
     <div>
-      <Home></Home>
+      <Router>
+        <Route exact path="/" component={Home} />
+        <Route path="/cadastro" component={CadastroLocal} />
+      </Router>
     </div>
   );
 }
